@@ -24,9 +24,24 @@
     "price": 139.95,
     "salePrice": 119.95,
     "onSale": true,
-    "colors": ["Desert Tan", "Forest Green", "Slate Blue"],
-    "sizes": [7, 8, 9, 10, 11, 12],
-    "tags": ["Trail", "Performance", "New Arrival"],
+    "colors": [
+      "Desert Tan",
+      "Forest Green",
+      "Slate Blue"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Trail",
+      "Performance",
+      "New Arrival"
+    ],
     "images": [
       {
         "id": 10111,
@@ -74,9 +89,25 @@
     "price": 129.99,
     "salePrice": null,
     "onSale": false,
-    "colors": ["White", "Navy", "Green"],
-    "sizes": [6, 7, 8, 9, 10, 11, 12],
-    "tags": ["Tennis", "Court", "Premium"],
+    "colors": [
+      "White",
+      "Navy",
+      "Green"
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Tennis",
+      "Court",
+      "Premium"
+    ],
     "images": [
       {
         "id": 10121,
@@ -118,9 +149,25 @@
     "price": 79.99,
     "salePrice": 69.99,
     "onSale": true,
-    "colors": ["Beige", "Green", "Black"],
-    "sizes": [5, 6, 7, 8, 9, 10, 11],
-    "tags": ["Sustainable", "Comfort", "Casual"],
+    "colors": [
+      "Beige",
+      "Green",
+      "Black"
+    ],
+    "sizes": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "tags": [
+      "Sustainable",
+      "Comfort",
+      "Casual"
+    ],
     "images": [
       {
         "id": 10131,
@@ -168,9 +215,25 @@
     "price": 149.95,
     "salePrice": 129.95,
     "onSale": true,
-    "colors": ["Tactical Black", "Olive", "Brown"],
-    "sizes": [5, 6, 7, 8, 9, 10, 11],
-    "tags": ["Urban", "Boots", "Trending"],
+    "colors": [
+      "Tactical Black",
+      "Olive",
+      "Brown"
+    ],
+    "sizes": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "tags": [
+      "Urban",
+      "Boots",
+      "Trending"
+    ],
     "images": [
       {
         "id": 10141,
@@ -218,9 +281,26 @@
     "price": 159.99,
     "salePrice": null,
     "onSale": false,
-    "colors": ["Infrared", "Black", "Blue"],
-    "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
-    "tags": ["Basketball", "Performance", "Premium"],
+    "colors": [
+      "Infrared",
+      "Black",
+      "Blue"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "tags": [
+      "Basketball",
+      "Performance",
+      "Premium"
+    ],
     "images": [
       {
         "id": 10151,
@@ -268,9 +348,25 @@
     "price": 110.0,
     "salePrice": 89.99,
     "onSale": true,
-    "colors": ["Sand", "Chocolate", "Navy"],
-    "sizes": [7, 8, 9, 10, 11, 12, 13],
-    "tags": ["Classic", "Casual", "Business Casual"],
+    "colors": [
+      "Sand",
+      "Chocolate",
+      "Navy"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "tags": [
+      "Classic",
+      "Casual",
+      "Business Casual"
+    ],
     "images": [
       {
         "id": 10161,
@@ -312,9 +408,24 @@
     "price": 119.95,
     "salePrice": 99.95,
     "onSale": true,
-    "colors": ["Slate", "Black", "Green"],
-    "sizes": [7, 8, 9, 10, 11, 12],
-    "tags": ["Minimalist", "Zero Drop", "Natural Running"],
+    "colors": [
+      "Slate",
+      "Black",
+      "Green"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Minimalist",
+      "Zero Drop",
+      "Natural Running"
+    ],
     "images": [
       {
         "id": 10171,
@@ -362,9 +473,25 @@
     "price": 89.99,
     "salePrice": null,
     "onSale": false,
-    "colors": ["Pearl White", "Silver", "Lavender"],
-    "sizes": [5, 6, 7, 8, 9, 10, 11],
-    "tags": ["Walking", "Comfort", "Everyday"],
+    "colors": [
+      "Pearl White",
+      "Silver",
+      "Lavender"
+    ],
+    "sizes": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "tags": [
+      "Walking",
+      "Comfort",
+      "Everyday"
+    ],
     "images": [
       {
         "id": 10181,
@@ -406,9 +533,24 @@
     "price": 134.99,
     "salePrice": 119.99,
     "onSale": true,
-    "colors": ["Volt", "Black/Red", "Grey"],
-    "sizes": [7, 8, 9, 10, 11, 12],
-    "tags": ["Training", "CrossFit", "Versatile"],
+    "colors": [
+      "Volt",
+      "Black/Red",
+      "Grey"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Training",
+      "CrossFit",
+      "Versatile"
+    ],
     "images": [
       {
         "id": 10191,
@@ -456,9 +598,23 @@
     "price": 189.99,
     "salePrice": null,
     "onSale": false,
-    "colors": ["Black Patent"],
-    "sizes": [7, 8, 9, 10, 11, 12, 13],
-    "tags": ["Formal", "Dress", "Premium"],
+    "colors": [
+      "Black Patent"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "tags": [
+      "Formal",
+      "Dress",
+      "Premium"
+    ],
     "images": [
       {
         "id": 10201,
@@ -506,9 +662,25 @@
     "price": 49.99,
     "salePrice": 39.99,
     "onSale": true,
-    "colors": ["Royal Blue", "Red", "Black"],
-    "sizes": [10, 11, 12, 13, 1, 2, 3],
-    "tags": ["Kids", "Easy-On", "Durable"],
+    "colors": [
+      "Royal Blue",
+      "Red",
+      "Black"
+    ],
+    "sizes": [
+      10,
+      11,
+      12,
+      13,
+      1,
+      2,
+      3
+    ],
+    "tags": [
+      "Kids",
+      "Easy-On",
+      "Durable"
+    ],
     "images": [
       {
         "id": 10211,
@@ -550,9 +722,25 @@
     "price": 189.95,
     "salePrice": 169.95,
     "onSale": true,
-    "colors": ["Graphite", "Brown"],
-    "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
-    "tags": ["Hiking", "Winter", "Waterproof"],
+    "colors": [
+      "Graphite",
+      "Brown"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "tags": [
+      "Hiking",
+      "Winter",
+      "Waterproof"
+    ],
     "images": [
       {
         "id": 10221,
@@ -600,9 +788,22 @@
     "price": 139.95,
     "salePrice": 124.95,
     "onSale": true,
-    "colors": ["Midnight Black", "Shadow Grey"],
-    "sizes": [8, 9, 10, 11, 12],
-    "tags": ["Trail", "Performance", "Night Edition"],
+    "colors": [
+      "Midnight Black",
+      "Shadow Grey"
+    ],
+    "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Trail",
+      "Performance",
+      "Night Edition"
+    ],
     "images": [
       {
         "id": 10113,
@@ -642,9 +843,21 @@
     "price": 139.95,
     "salePrice": null,
     "onSale": false,
-    "colors": ["Arctic Blue", "Ice Grey"],
-    "sizes": [7, 8, 9, 10],
-    "tags": ["Trail", "Winter", "Alpine"],
+    "colors": [
+      "Arctic Blue",
+      "Ice Grey"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "tags": [
+      "Trail",
+      "Winter",
+      "Alpine"
+    ],
     "images": [
       {
         "id": 10114,
@@ -684,9 +897,21 @@
     "price": 139.95,
     "salePrice": 109.95,
     "onSale": true,
-    "colors": ["Ember Red", "Ash Grey"],
-    "sizes": [8, 9, 10, 11],
-    "tags": ["Trail", "Summer", "Limited Edition"],
+    "colors": [
+      "Ember Red",
+      "Ash Grey"
+    ],
+    "sizes": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "tags": [
+      "Trail",
+      "Summer",
+      "Limited Edition"
+    ],
     "images": [
       {
         "id": 10115,
@@ -726,9 +951,21 @@
     "price": 139.95,
     "salePrice": null,
     "onSale": false,
-    "colors": ["Forest Camo", "Olive"],
-    "sizes": [9, 10, 11, 12],
-    "tags": ["Trail", "Camo", "Outdoors"],
+    "colors": [
+      "Forest Camo",
+      "Olive"
+    ],
+    "sizes": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "tags": [
+      "Trail",
+      "Camo",
+      "Outdoors"
+    ],
     "images": [
       {
         "id": 10116,
@@ -768,9 +1005,22 @@
     "price": 139.95,
     "salePrice": 114.95,
     "onSale": true,
-    "colors": ["Solar Orange", "Flare Yellow"],
-    "sizes": [7, 8, 9, 10, 11],
-    "tags": ["Trail", "Bright", "Performance"],
+    "colors": [
+      "Solar Orange",
+      "Flare Yellow"
+    ],
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "tags": [
+      "Trail",
+      "Bright",
+      "Performance"
+    ],
     "images": [
       {
         "id": 10117,

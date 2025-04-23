@@ -16,17 +16,114 @@
  * - The use of interfaces and type aliases to create a clear and maintainable structure
  */
 
+//type ArrayType<T> = Array<T>;
+type ArrayType<T> = T[];
+
 // PRODUCTS JSON
 
 //! Add necessary type definitions for the products json file
+type Image = {
+    id : number;
+    url: string;
+    alt: string;
+    isMain: boolean;
+};
+type  Specifications = {
+    material: string;
+    weight: string;
+    cushioning: string;
+    closure: string;
+    archSupport: string;
+};
+export type  Product  =  {
+    id: number;
+    name: string;
+    deparmentId: number;
+    categoryId: number;
+    brandId: number;
+    linkId: string;
+    refId: string;
+    isVisible: boolean;
+    description: string;
+    descriptionShort: string;
+    releaseDate: string;
+    keywords: string;
+    title: string;
+    isActive: boolean;
+    taxCode: string;
+    metaTagDescription: string;
+    supplierId: number;
+    showWithoutStock: boolean;
+    asWordsRemarketingCode: string;
+    lomadeeCampaingCode: string;
+    score: number;
+    price: number;
+    salePrice: number;
+    onSale: boolean;
+    colors: ArrayType<string>;//check how to put Array<T>
+    sizes: ArrayType<number>;
+    tags: ArrayType<string>;
+    images: ArrayType<Image>;
+    specifications: Specifications;
+}
+
 
 // CATEGORIES JSON
 
 //! Add necessary type definitions for the brands json file
+interface Filter {
+    name:string;
+    values: ArrayType<string>;
+}
+interface Category {
+    id:number;
+    name: string;
+    departmentId: number;
+    description:string;
+    keywords: string;
+    isActive: boolean;
+    iconUrl: string;
+    bannerUrl: string;
+    displayOrder: number;
+    metaDescription :string;
+    filters :Filter;
+}
+
 
 // BRANDS JSON
 
 //! Add necessary type definitions for the brands json file
+interface SocialMedia {
+    instagram: string;
+    twitter: string;
+    facebook: string;
+}
+
+type Brand = {
+    id:number;
+    name:string;
+    logo: string;
+    description: string;
+    foundedYear: number;
+    website: string;
+    isActive: boolean;
+    headquarters: string;
+    signature: string;
+    socialMedia: SocialMedia;
+
+}
 
 // DEPARTMENTS JSON
 //! Add necessary type definitions for the departments json file
+type Department = {
+    id:number;
+    name:string;
+    description: string;
+    isActive: boolean;
+    displayOrder: number;
+    iconUrl: string;
+    bannerUrl: string;
+    metaDescription: string;
+    featuredCategories: number[];
+    slug: string;
+}

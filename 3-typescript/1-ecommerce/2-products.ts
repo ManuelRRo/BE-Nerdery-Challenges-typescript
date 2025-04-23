@@ -19,7 +19,42 @@
  *
  **/
 
-async function analyzeProductPrices(products: any[]): Promise<any> {}
+async function analyzeProductPrices(products: any[]): Promise<any> {
+  type Product = {
+    name:string;
+    price: number;
+    onSale: boolean;
+  }
+
+  type analyzedProducts = {
+    totalPrice: number;
+    averagePrice: number;
+    mostExpensiveProduct?: Product ;
+    cheapestProduct?: Product;
+    onSaleCount: number;
+    averageDiscount: number;
+  }
+
+  function Analysis(products : Product): analyzedProducts {
+    const totalPrice: number = 0;
+    const averagePrice: number = 0;
+    const mostExpensiveProduct: Product = {
+      name : "jsdkfa",
+      price: 0.00,
+      onSale: false
+    } ;
+    const cheapestProduct: Product = {
+      name : "jsdkfa",
+      price: 0.00,
+      onSale: false
+    } ;
+    const onSaleCount: number = 0;
+    const averageDiscount: number = 0;
+    return{
+      totalPrice,averagePrice,mostExpensiveProduct,cheapestProduct,onSaleCount,averageDiscount
+    }
+  }
+}
 
 /**
  *  Challenge 2: Build a Product Catalog with Brand Metadata
