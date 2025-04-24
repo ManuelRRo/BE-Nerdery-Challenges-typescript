@@ -28,6 +28,7 @@ type Image = {
     alt: string;
     isMain: boolean;
 };
+
 type  Specifications = {
     material: string;
     weight: string;
@@ -35,6 +36,7 @@ type  Specifications = {
     closure: string;
     archSupport: string;
 };
+
 export type  Product  =  {
     id: number;
     name: string;
@@ -75,6 +77,7 @@ interface Filter {
     name:string;
     values: ArrayType<string>;
 }
+
 interface Category {
     id:number;
     name: string;
@@ -99,7 +102,7 @@ interface SocialMedia {
     facebook: string;
 }
 
-type Brand = {
+export type Brand = {
     id:number;
     name:string;
     logo: string;
@@ -111,6 +114,13 @@ type Brand = {
     signature: string;
     socialMedia: SocialMedia;
 
+}
+
+export type BrandInfo = Omit<Brand,"id" | "isActive">;
+
+
+export type EnrichedProduct = Product & {
+    brandInfo: BrandInfo
 }
 
 // DEPARTMENTS JSON

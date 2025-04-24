@@ -1,3 +1,4 @@
+import { Product, Brand, EnrichedProduct, BrandInfo } from "./1-types";
 /**
  * Products - Challenge 1: Product Price Analysis
  *
@@ -19,47 +20,61 @@
  *
  **/
 
-async function analyzeProductPrices(products: any[]): Promise<any> {
-  type Product = {
-    name:string;
-    price: number;
-    onSale: boolean;
-  }
+export async function analyzeProductPrices(products: any[]): Promise<any> {
+  //return thing as something
+  type productPick = Pick<Product, "name" | "price" | "onSale">;
 
   type analyzedProducts = {
     totalPrice: number;
     averagePrice: number;
-    mostExpensiveProduct?: Product ;
-    cheapestProduct?: Product;
+    mostExpensiveProduct: productPick;
+    cheapestProduct: productPick;
     onSaleCount: number;
     averageDiscount: number;
   }
 
-  function Analysis(products : Product): analyzedProducts {
-    const totalPrice: number = 0;
-    const averagePrice: number = 0;
-    const mostExpensiveProduct: Product = {
-      name : "jsdkfa",
-      price: 0.00,
-      onSale: false
-    } ;
-    const cheapestProduct: Product = {
-      name : "jsdkfa",
-      price: 0.00,
-      onSale: false
-    } ;
-    const onSaleCount: number = 0;
-    const averageDiscount: number = 0;
-    return{
-      totalPrice,averagePrice,mostExpensiveProduct,cheapestProduct,onSaleCount,averageDiscount
+  //at the begginning both are the same
+  let mostExpensiveProduct = products[0] as productPick;
+  let cheapestProduct: productPick = products[0] as productPick;
+
+  //console.log("cheapest at the beggining",cheapestProduct);
+
+  if (products.length === 0) { throw new Error("Product list cannot be empty") }
+
+
+  const totalPrice = products.reduce((total, product) => total + product.price, 0);
+
+  const averagePrice = parseFloat((totalPrice / products.length).toFixed(2)); // 2 decimal
+
+  for (const product of products) {
+    if (product.price > mostExpensiveProduct.price) {
+      mostExpensiveProduct = product;
     }
+    if (product.price < cheapestProduct.price) {
+      cheapestProduct = product;
+    }
+  }
+
+  const onSaleProducts = products.filter(p => p.onSale);
+
+  const onSaleCount = onSaleProducts.length;
+
+  let averageDiscount: number = 0;
+  //discountPercentage = ((price - salePrice) / price) * 100
+
+  if (onSaleCount > 0) {
+    averageDiscount = onSaleProducts.reduce((sum, p) => sum + ((p.price - (p as any).salePrice) / p.price) * 100, 0);
+  }
+  return {
+    totalPrice, averagePrice, mostExpensiveProduct, cheapestProduct, onSaleCount, averageDiscount
   }
 }
 
 /**
  *  Challenge 2: Build a Product Catalog with Brand Metadata
  *
- * Create a function that takes arrays of Product and Brand, and returns a new array of enriched product entries. Each entry should include brand details embedded into the product, under a new brandInfo property (excluding the id and isActive fields).
+ * Create a function that takes arrays of Product and Brand, and returns a new array of enriched product entries. 
+ * Each entry should include brand details embedded into the product, under a new brandInfo property (excluding the id and isActive fields).
  *  e.g
  *  buildProductCatalog(products: Product[], brands: Brand[]): EnrichedProduct[]
 
@@ -70,11 +85,33 @@ async function analyzeProductPrices(products: any[]): Promise<any> {
   - The brandInfo field should include the rest of the brand metadata (name, logo, description, etc.).
  */
 
-async function buildProductCatalog(
+export async function buildProductCatalog(
   products: unknown[],
   brands: unknown[],
 ): Promise<unknown[]> {
-  return [];
+  const EnrichedProducts: EnrichedProduct[] = new Array();
+
+  const activeBrands = (brands as Brand[]).filter((brand) => brand.isActive);
+
+  const activeProducts = (products as Product[]).filter((product) => product.isActive);
+
+  activeProducts.forEach(product => {
+    const brand = activeBrands.find(brand => brand.id === product.brandId);//return first element
+    if (brand) {
+
+      const { id, isActive, ...brandInfo } = brand;//remove id and isActive copy the rest to brand info
+
+      const enrichedProduct: EnrichedProduct = {
+        ...product,
+        brandInfo
+      };
+
+      EnrichedProducts.push(enrichedProduct);
+    }
+  });
+
+  return EnrichedProducts;
+
 }
 
 /**
@@ -91,10 +128,20 @@ async function buildProductCatalog(
  * - Use proper TypeScript typing for parameters and return values.
  */
 
-async function filterProductsWithOneImage(
+export async function filterProductsWithOneImage(
   products: unknown[],
 ): Promise<unknown[]> {
   // Implement the function logic here
 
-  return [];
+  const allProducts = (products as Product[]);
+  
+  const filteredProducts = allProducts.filter(product => product.images.length > 0).map((product) => {
+    const [firstImage] = product.images;
+    return {
+      // ...product,
+      images: firstImage ? [firstImage] : [],
+    };
+  });
+
+  return filteredProducts;
 }

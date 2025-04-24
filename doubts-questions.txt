@@ -1,0 +1,1 @@
+1. (2-products.ts) - if I make a pick from products to just have name,price,onSale instead of all fields, how can i do it ? and how can map or parse the data to a pick
