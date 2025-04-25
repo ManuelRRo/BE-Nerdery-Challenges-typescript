@@ -12,3 +12,29 @@
  * - The function should not use any external libraries
  */
 //? implement the function  here
+function deepClone(input) {
+    // Handle primitives and null
+    if (input === null || typeof input !== 'object') {
+        return input;
+    }
+    // Handle Date
+    if (input instanceof Date) {
+        return new Date(input.getTime());
+    }
+    // Handle Array
+    if (Array.isArray(input)) {
+        const cloneArr = [];
+        for (const item of input) {
+            cloneArr.push(deepClone(item));
+        }
+        return cloneArr;
+    }
+    // Handle Object
+    const cloneObj = {};
+    for (const key in input) {
+        if (input.hasOwnProperty(key)) {
+            cloneObj[key] = deepClone(input[key]);
+        }
+    }
+    return cloneObj;
+}

@@ -20,9 +20,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDepartmentsWithProductCount = getDepartmentsWithProductCount;
 function getDepartmentsWithProductCount(departments, products) {
     return __awaiter(this, void 0, void 0, function* () {
-        // Implement the function logic here
-        return [];
+        return departments.map(function (deapartment) {
+            const relatedProducts = products.filter(product => product.departmentId === deapartment.id);
+            return {
+                id: deapartment.id,
+                name: deapartment.name,
+                productCount: relatedProducts.length,
+                productsNames: relatedProducts.map(p => p.name),
+            };
+        });
     });
 }

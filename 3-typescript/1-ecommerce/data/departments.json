@@ -8,7 +8,11 @@
     "iconUrl": "departments/athletic_icon.png",
     "bannerUrl": "departments/athletic_banner.jpg",
     "metaDescription": "Discover high-performance athletic footwear engineered for serious athletes and fitness enthusiasts.",
-    "featuredCategories": [4001, 4003, 4004],
+    "featuredCategories": [
+      4001,
+      4003,
+      4004
+    ],
     "slug": "athletic-performance"
   },
   {
@@ -20,7 +24,10 @@
     "iconUrl": "departments/lifestyle_icon.png",
     "bannerUrl": "departments/lifestyle_banner.jpg",
     "metaDescription": "Elevate your everyday style with comfortable and fashionable casual footwear options.",
-    "featuredCategories": [4002, 4010],
+    "featuredCategories": [
+      4002,
+      4010
+    ],
     "slug": "lifestyle-casual"
   },
   {
@@ -32,7 +39,9 @@
     "iconUrl": "departments/fashion_icon.png",
     "bannerUrl": "departments/fashion_banner.jpg",
     "metaDescription": "Stay on trend with fashion-forward footwear that makes a statement with every step.",
-    "featuredCategories": [4022],
+    "featuredCategories": [
+      4022
+    ],
     "slug": "fashion"
   },
   {

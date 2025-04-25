@@ -21,9 +21,35 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getCountriesWithBrandsAndProductCount = getCountriesWithBrandsAndProductCount;
 function getCountriesWithBrandsAndProductCount(brands, products) {
     return __awaiter(this, void 0, void 0, function* () {
-        // Implement the function logic here
-        return;
+        function toNumber(value) {
+            const num = Number(value);
+            if (isNaN(num)) {
+                throw new Error("Invalid number");
+            }
+            return num;
+        }
+        const countryProductCountRecord = {};
+        const brandIdToCountry = new Map(brands.map((brand) => {
+            const parts = brand.headquarters.split(",").map(part => part.trim());
+            const country = parts[1];
+            return [toNumber(brand.id), country];
+        }));
+        brandIdToCountry.forEach((value, key) => {
+            console.log(`${typeof (key)}: ${value}`);
+        });
+        products.forEach((product) => {
+            const country = brandIdToCountry.get(product.brandId);
+            if (country) {
+                if (!countryProductCountRecord[country]) {
+                    countryProductCountRecord[country] = 0;
+                }
+                countryProductCountRecord[country]++;
+            }
+        });
+        return countryProductCountRecord;
     });
 }

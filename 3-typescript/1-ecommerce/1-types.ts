@@ -40,7 +40,7 @@ type  Specifications = {
 export type  Product  =  {
     id: number;
     name: string;
-    deparmentId: number;
+    departmentId: number;
     categoryId: number;
     brandId: number;
     linkId: string;
@@ -103,7 +103,7 @@ interface SocialMedia {
 }
 
 export type Brand = {
-    id:number;
+    id:number | string;
     name:string;
     logo: string;
     description: string;
@@ -113,6 +113,7 @@ export type Brand = {
     headquarters: string;
     signature: string;
     socialMedia: SocialMedia;
+    country: string; 
 
 }
 
@@ -123,9 +124,10 @@ export type EnrichedProduct = Product & {
     brandInfo: BrandInfo
 }
 
+
 // DEPARTMENTS JSON
 //! Add necessary type definitions for the departments json file
-type Department = {
+export type Department = {
     id:number;
     name:string;
     description: string;
@@ -137,3 +139,11 @@ type Department = {
     featuredCategories: number[];
     slug: string;
 }
+
+export type DepartmentProductInfo = {
+    id: number;
+    name: string;
+    productCount: number;
+    productsNames: string[];
+  };
+  

@@ -11,15 +11,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const read_json_util_1 = require("./utils/read-json.util");
 const _2_products_1 = require("./2-products");
+const _3_brands_1 = require("./3-brands");
+const _4_departments_1 = require("./4-departments");
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const productsData = yield (0, read_json_util_1.readJsonFile)("/home/manu/ravn/BE-Nerdery-Challenges-typescript/3-typescript/1-ecommerce/data/products.json");
         const branData = yield (0, read_json_util_1.readJsonFile)("/home/manu/ravn/BE-Nerdery-Challenges-typescript/3-typescript/1-ecommerce/data/brands.json");
+        const departmentData = yield (0, read_json_util_1.readJsonFile)("/home/manu/ravn/BE-Nerdery-Challenges-typescript/3-typescript/1-ecommerce/data/departments.json");
         //console.log(data);
         const result = yield (0, _2_products_1.analyzeProductPrices)(productsData);
         const result2 = yield (0, _2_products_1.buildProductCatalog)(productsData, branData);
         const result3 = yield (0, _2_products_1.filterProductsWithOneImage)(productsData);
-        console.log("Filtered products", JSON.stringify(result3));
+        const result4 = yield (0, _3_brands_1.getCountriesWithBrandsAndProductCount)(branData, productsData);
+        const result5 = yield (0, _4_departments_1.getDepartmentsWithProductCount)(departmentData, productsData);
+        //const result6: Data = await getDepartmentsWithProductCount(departmentData,productsData);
+        console.log("Filtered products", JSON.stringify(result4));
     });
 }
 main();
